@@ -2,6 +2,7 @@ package com.plming.freely;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,7 +15,7 @@ public class ChatController {
     }
 
     @PostMapping("/chat")
-    public ChatResponse chat() {
-        return gemini.generate();
+    public ChatResponse chat(@RequestBody ChatRequest chatRequest) {
+        return gemini.generate(chatRequest.getQuery());
     }
 }
