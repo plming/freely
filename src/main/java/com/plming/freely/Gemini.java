@@ -13,7 +13,7 @@ import org.springframework.web.client.RestClient;
 public class Gemini {
     private final RestClient client;
 
-    @Value("${gemini.apiKey}")
+    @Value("${gemini.api-key}")
     private String apiKey;
 
     public Gemini() {
