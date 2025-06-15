@@ -26,3 +26,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// disable plainJar(normal archive) to avoid duplication with bootJar(executable archive)
+jar {
+	enabled = false
+}
