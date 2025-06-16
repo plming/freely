@@ -23,6 +23,7 @@ jobs:
         with:
           java-version: '21'
           distribution: 'microsoft'
+          cache: 'gradle'
 
       - name: Build with Gradle
         run: chmod +x ./gradlew && ./gradlew clean build
