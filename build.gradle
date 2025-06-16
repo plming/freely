@@ -28,6 +28,6 @@ tasks.named('test') {
 }
 
 // disable plainJar(normal archive) to avoid duplication with bootJar(executable archive)
-jar {
+tasks.named('jar') {
 	enabled = false
 }
